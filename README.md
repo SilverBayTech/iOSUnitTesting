@@ -26,3 +26,7 @@ limitations under the License.
 
 "Bounce.mp3" was obtained from http://soundbible.com/1120-Bounce.html and is licensed under the Creative Commons Attribution 3.0 LIcense (http://creativecommons.org/licenses/by/3.0/us/).  According to the page on SoundBible, this sound was recorded by Mike Koenig.
 
+### OCMock
+
+OCMock is publicly licensed by Mulle Kybernetik.  See the LICENSE.txt file in ThirdParty/OCMock-2.0.1.
+

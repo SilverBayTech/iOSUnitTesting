@@ -64,7 +64,7 @@
     // Destination is right edge of screen minus radius of ball
     CGSize ballSize = self.ballImageView.bounds.size;
     CGSize viewSize = self.view.bounds.size;
-    CGPoint dest = CGPointMake(viewSize.width - ballSize.width, _ballHome.y);
+    CGPoint dest = CGPointMake(viewSize.width - ballSize.width / 2, _ballHome.y);
     [self bounceBallTo:dest];
 }
 

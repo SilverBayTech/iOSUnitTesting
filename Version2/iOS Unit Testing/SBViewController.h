@@ -2,8 +2,6 @@
 //  SBViewController.h
 //  iOS Unit Testing
 //
-//  Copyright 2012 Kevin Hunter
-//
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
@@ -17,10 +15,14 @@
 //  limitations under the License.
 //
 
-@interface SBViewController : UIViewController
+#import "SBAnimationManager.h"
+
+@interface SBViewController : UIViewController<SBAnimationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *ballImageView;
 @property (weak, nonatomic) IBOutlet UIButton *verticalButton;
 @property (weak, nonatomic) IBOutlet UIButton *horizontalButton;
+
+@property (strong, nonatomic) SBAnimationManager *animationManager;
 
 - (IBAction)onVerticalButtonPressed:(id)sender;
 - (IBAction)onHorizontalButtonPressed:(id)sender;

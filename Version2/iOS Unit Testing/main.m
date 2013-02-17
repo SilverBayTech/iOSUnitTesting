@@ -1,5 +1,5 @@
 //
-//  SBViewController.h
+//  main.m
 //  iOS Unit Testing
 //
 //  Copyright 2012 Kevin Hunter
@@ -17,11 +17,13 @@
 //  limitations under the License.
 //
 
-@interface SBViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *ballImageView;
-@property (weak, nonatomic) IBOutlet UIButton *verticalButton;
-@property (weak, nonatomic) IBOutlet UIButton *horizontalButton;
+#import <UIKit/UIKit.h>
 
-- (IBAction)onVerticalButtonPressed:(id)sender;
-- (IBAction)onHorizontalButtonPressed:(id)sender;
-@end
+#import "SBAppDelegate.h"
+
+int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SBAppDelegate class]));
+    }
+}

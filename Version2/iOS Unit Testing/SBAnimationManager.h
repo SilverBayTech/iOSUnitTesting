@@ -1,8 +1,6 @@
 //
-//  SBViewController.h
+//  SBAnimationManager.h
 //  iOS Unit Testing
-//
-//  Copyright 2012 Kevin Hunter
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,11 +15,11 @@
 //  limitations under the License.
 //
 
-@interface SBViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *ballImageView;
-@property (weak, nonatomic) IBOutlet UIButton *verticalButton;
-@property (weak, nonatomic) IBOutlet UIButton *horizontalButton;
+@protocol SBAnimationManagerDelegate<NSObject>
+- (void) animationComplete;
+@end
 
-- (IBAction)onVerticalButtonPressed:(id)sender;
-- (IBAction)onHorizontalButtonPressed:(id)sender;
+@interface SBAnimationManager : NSObject
+@property (weak, nonatomic) NSObject<SBAnimationManagerDelegate> *delegate;
+- (void) bounceView:(UIView *)view to:(CGPoint) dest;
 @end
